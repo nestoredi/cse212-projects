@@ -11,6 +11,31 @@ public static class ArraySelector
 
     private static int[] ListSelector(int[] list1, int[] list2, int[] select)
     {
-        return [];
+        // 1. Creamos el arreglo donde guardaremos el resultado final
+        int[] result = new int[select.Length];
+
+        // 2. Variables para recordar en qué posición vamos de cada lista
+        int index1 = 0;
+        int index2 = 0;
+
+        // 3. Recorremos el arreglo selector
+        for (int i = 0; i < select.Length; i++)
+        {
+            if (select[i] == 1)
+            {
+                // Si es 1, tomamos el elemento actual de list1 y avanzamos su índice
+                result[i] = list1[index1];
+                index1++;
+            }
+            else if (select[i] == 2)
+            {
+                // Si es 2, tomamos el elemento actual de list2 y avanzamos su índice
+                result[i] = list2[index2];
+                index2++;
+            }
+        }
+
+        // 4. Devolvemos el arreglo final combinado
+        return result;
     }
 }

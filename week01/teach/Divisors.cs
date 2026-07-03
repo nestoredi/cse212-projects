@@ -18,7 +18,18 @@ public static class Divisors {
     /// <returns>List of divisors</returns>
     private static List<int> FindDivisors(int number) {
         List<int> results = new();
-        // TODO problem 1
+        
+        // 1. Empezamos en 1 y corremos el bucle mientras 'i' sea menor que el número
+        for (int i = 1; i < number; i++) {
+            
+            // 2. Si el residuo de dividir 'number' entre 'i' es 0, significa que es divisor
+            if (number % i == 0) {
+                
+                // 3. Lo agregamos a la lista de resultados
+                results.Add(i);
+            }
+        }
+        
         return results;
     }
 }

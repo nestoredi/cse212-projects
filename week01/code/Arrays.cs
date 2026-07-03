@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public static class Arrays
 {
     /// <summary>
@@ -9,11 +12,25 @@ public static class Arrays
     public static double[] MultiplesOf(double number, int length)
     {
         // TODO Problem 1 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        // Plan:
+        // 1. Initialize a new array of doubles called 'result' with a size equal to the 'length' parameter.
+        // 2. Create a loop that iterates from 0 up to 'length - 1' using a loop counter variable (e.g., i).
+        // 3. In each iteration, calculate the multiple by multiplying 'number' by (i + 1).
+        // 4. Store the calculated multiple into the 'result' array at index i.
+        // 5. After the loop finishes, return the completed 'result' array.
 
-        return []; // replace this return statement with your own
+        // 1. Initialize the array
+        double[] result = new double[length];
+
+        // 2. Loop through the length of the array
+        for (int i = 0; i < length; i++)
+        {
+            // 3 & 4. Calculate the multiple and store it at index i
+            result[i] = number * (i + 1);
+        }
+
+        // 5. Return the array
+        return result;
     }
 
     /// <summary>
@@ -26,8 +43,22 @@ public static class Arrays
     public static void RotateListRight(List<int> data, int amount)
     {
         // TODO Problem 2 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        // Plan:
+        // 1. Calculate the starting split index of the segment that needs to move to the front (data.Count - amount).
+        // 2. Extract this segment from the end of the list using GetRange() and store it in a temporary list.
+        // 3. Remove the extracted segment from its original position at the end of the list using RemoveRange().
+        // 4. Insert the temporary list containing the segment at the very beginning (index 0) of the list using InsertRange().
+
+        // 1. Calculate the index where the split happens
+        int splitIndex = data.Count - amount;
+
+        // 2. Get the range of numbers from the split index to the end of the list
+        List<int> rotatedSegment = data.GetRange(splitIndex, amount);
+
+        // 3. Remove those numbers from the back of the original list
+        data.RemoveRange(splitIndex, amount);
+
+        // 4. Insert the removed numbers at the front (index 0) of the list
+        data.InsertRange(0, rotatedSegment);
     }
 }
