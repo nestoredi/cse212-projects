@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "TitoffJQO3I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ncros\\Desktop\\cse212-projects\\week02\\learn\\learn.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ncros\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.28\\microsoft.netcore.app.ref.8.0.28.nupkg.sha512",
+    "C:\\Users\\ncros\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.28\\microsoft.windowsdesktop.app.ref.8.0.28.nupkg.sha512",
+    "C:\\Users\\ncros\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.28\\microsoft.aspnetcore.app.ref.8.0.28.nupkg.sha512",
+    "C:\\Users\\ncros\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.28\\microsoft.netcore.app.host.win-x64.8.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}
